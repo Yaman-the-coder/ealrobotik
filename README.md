@@ -1,84 +1,47 @@
-# EAL Robotik 8828 Website
+<div align="center">
+  <h1>🤖 EAL Robotics | FRC Team 8828</h1>
+  <p><strong>Official Web Portal & Resource Hub</strong></p>
+  
+  <br>
+  
+  <img src="https://img.shields.io/badge/Next.js_14-000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF.svg?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+</div>
 
-Modern Next.js 14 + TypeScript + Tailwind tabanlı tek sayfalık (anchor navigasyon) tanıtım ve kaynak portalı.
+---
 
-## Özellikler
-- Next.js 14 (App Router) + TypeScript (strict)
-- Tailwind CSS + dark mode (next-themes)
-- Shadcn benzeri UI bileşen yaklaşımı (Button, Theme Toggle, vb.)
-- Framer Motion ile animasyonlu hero, timeline, stat rozetleri
-- Scroll spy (IntersectionObserver) ile aktif menü vurgulama
-- Tek sayfa anchor navigasyon (SSR + progressive enhancement)
-- Cam / blur (glassmorphism) paneller ve gradient arka plan
-- Sponsor marquee animasyonu
-- Eğitim linkleri (yazılım / mekanik / doküman) ve kaynak listesi
-- Dış link güvenlik öznitelikleri (rel="noopener noreferrer")
-- Kullanılmayan bağımlılıkların temizlenmesi (recharts & eski route sayfaları kaldırıldı)
+### 🌐 Overview
+A modern, single-page application (SPA) with anchor navigation, serving as the promotional website and resource portal for Eskişehir's FRC Team 8828. Built on the Next.js 14 App Router, it heavily utilizes server-side rendering (SSR) and progressive enhancement.
 
-## Bölümler
-1. Hero
-2. Hakkında (Vizyon / Misyon / Felsefe + Highlights)
-3. Performans (Sezon tablosu + Timeline + Sponsor Marquee)
-4. Ekosistem & Destek (Sponsor grupları)
-5. Kaynaklar (Özet + link listesi)
-6. Eğitimler (Kategorize linkler)
-7. Sosyal Sorumluluk (Waves of Innovation)
-8. İletişim
+### ✨ Features
+* **Modern Stack:** Next.js 14 (App Router) + strict TypeScript integration.
+* **Styling & Theming:** Tailwind CSS with full dark mode support via `next-themes`.
+* **Component-Driven UI:** Shadcn-inspired modular UI components (Buttons, Theme Toggles, etc.).
+* **Fluid Animations:** Framer Motion powered hero sections, timelines, and stat badges.
+* **Smart Navigation:** Scroll spy (via `IntersectionObserver`) for active menu highlighting and smooth anchor scrolling.
+* **Modern Aesthetics:** Glassmorphism (`.glass`) panels, blur effects, and dynamic gradient backgrounds.
+* **Interactive Elements:** Continuous sponsor marquee animation.
+* **Resource Hub:** Categorized educational links (software/mechanics/documentation) and open-source resources.
+* **Security & Performance:** Secure external links (`rel="noopener noreferrer"`) and a lean bundle (unused dependencies like recharts and legacy routes removed).
 
-## Kurulum ve Geliştirme
+---
+
+### 🗺️ Sections
+1. **Hero:** High-impact landing area.
+2. **About:** Vision, Mission, Philosophy, and key Highlights.
+3. **Performance:** Season statistics table, historical Timeline, and Sponsor Marquee.
+4. **Ecosystem & Support:** Categorized sponsor groups.
+5. **Resources:** Curated link lists and summaries.
+6. **Trainings:** Categorized educational materials.
+7. **Social Responsibility:** "Waves of Innovation" outreach programs.
+8. **Contact:** Team communication channels.
+
+---
+
+### 🛠️ Setup & Development
+
+**1. Install Dependencies**
 ```bash
-npm install      # veya pnpm install / yarn
-npm run dev
-```
-Tarayıcı: http://localhost:3000
-
-Prod build:
-```bash
-npm run build
-npm start
-```
-
-## Proje Yapısı
-```
-app/
-	layout.tsx
-	page.tsx              # Tek sayfa içerik
-components/
-	site-header.tsx       # Navigasyon + scroll spy
-	sections/             # Hero, timeline, marquee, vb.
-	ui/                   # Button, yardımcı bileşenler
-data/
-	team.ts               # Tüm içerik/veri modelleri
-lib/
-	utils.ts              # cn helper
-tailwind.config.ts
-tsconfig.json           # Path alias: @/components, @/data, @/lib
-```
-
-## Tip Güvenliği
-- `data/team.ts` içinde interface'ler: SeasonPerformance, SponsorGroup, TrainingLink, Source
-- Map / filter callback'lerinde explicit tipler
-- Hash state için template literal tipi (`#${string}`)
-
-## Stil
-- `globals.css` içinde cam efekt: `.glass` ve `.glass-panel`
-- Gradient metin: `.gradient-text`
-- Tailwind + CSS değişken temelli renk sistemi
-
-## Geliştirme Notları
-- Kullanılmayan grafik bileşeni, eski route sayfaları ve `recharts` + `critters` bağımlılığı kaldırıldı
-- Dış linkler güvenli: `rel="noopener noreferrer"`
-- Performans tablosu manuel veri modeli ile yönetiliyor
-
-## Gelecek İyileştirmeler (Öneri)
-- SEO metadata ve JSON-LD
-- Lighthouse optimizasyon turu
-- Timeline verisini data dosyasına taşıma
-- İletişim formu (Server Action)
-- Unit test / erişilebilirlik denetimi
-
-## İçerik Güncelleme
-Metin, performans, sponsor ve link güncellemeleri için `data/team.ts` düzenleyin. Bölüm eklemek isterseniz `app/page.tsx` içinde yeni bir `<section id="...">` bloğu ekleyin ve header nav listesine anchor ekleyin.
-
-## Lisans
-Kod örnek kullanım için serbest (MIT benzeri). İçerik telif hakları EAL Robotik takımına aittir. FIRST markaları ilgili sahiplerine aittir.
+npm install  # or pnpm install / yarn
